@@ -55,7 +55,7 @@ module "asg_lc" {
   security_groups = ["${module.security_group.this_security_group_id}"]
 
   # Auto scaling group
-  asg_name            = "test-asg"
+  name                = "test-asg"
   vpc_zone_identifier = ["${module.vpc.public_subnets}"]
   health_check_type   = "EC2"
   min_size            = 0

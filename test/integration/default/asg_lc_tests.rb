@@ -10,8 +10,8 @@ describe autoscaling_group("#{asg_name}") do
   it { should exist }
   it { should have_launch_configuration("#{lc_name}") }
   it { should have_tag('Environment').value('test') }
-  it { should have_tag('Name').value('test-instance') }
-  it { should have_ec2('test-instance') }
+  it { should have_tag('Name').value('test-asg') }
+  it { should have_ec2('test-asg') }
   its(:min_size) { should eq 0 }
   its(:max_size) { should eq 1 }
   its(:desired_capacity) { should eq 1 }

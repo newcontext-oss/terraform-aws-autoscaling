@@ -10,5 +10,5 @@ output "asg_name" {
 
 output "lc_name" {
   description = "Autoscaling group name."
-  value       = "${module.asg_lc.this_autoscaling_group_launch_configuration}"
+  value       = "${module.asg_lc.this_launch_configuration_name}"
 }
